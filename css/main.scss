@@ -1,0 +1,151 @@
+//rest
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html{height: 100%;width: 100%;}
+body{background: url(../img/bg.png) center/ 100% 100% no-repeat;position: relative;height: 100%;width: 100%;font-family: "微软雅黑";height: 100%;width: 100%}
+
+.media-player{
+    position: fixed;
+    background-color: rgba(251, 251, 251, 0.2);
+    width: 600px;
+    height: 400px;
+    left:29%;
+    top:20%;
+    border-radius: 20px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.8);
+}
+.header{
+    width: 600px;
+    height: 300px;
+    .song-list{
+        float: left;
+        width: 100px;
+        height: 300px;
+        padding: 10px;
+        list-style-type: none;
+        color: white;
+        li{
+            border-bottom: solid 1px rgba(255,255,255,0.6);
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+    }
+    .lrc-content{
+        position: relative;
+        float: right;
+        height: 300px;
+        width: 500px;
+        border-left: solid 1px rgba(255,255,255,0.6);
+        padding: 20px;
+        overflow: hidden;
+        text-align: center;
+        color: white;
+        #lrc{
+            position: absolute;
+            left: 25%;
+            top:0;
+
+        }
+    }
+}
+.control{
+    width: 600px;
+    height: 100px;
+    span{
+        color: white;
+    }
+    .progress{
+        width: 600px;
+        height: 50px;
+        border-top: solid 1px rgba(255,255,255,0.6);
+        border-bottom: solid 1px rgba(255,255,255,0.6);
+        padding-top: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+        input[type=range]{
+            -webkit-appearance:none;
+            width: 400px;
+            border-radius: 10px;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            -webkit-appearance:none;
+        }
+        input[type=range]::-webkit-slider-runnable-track{
+            height:15px;
+            border-radius: 10px;
+            box-shadow:0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+        }
+        input[type=range]:focus,input[type=range]:active{
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            -webkit-appearance:none;
+            background: white;
+            height: 25px;
+            width: 25px;
+            margin-top: -5px;
+            border-radius: 50%;
+            border: solid 0.125em rgba(255, 224, 230, 0.8);
+            box-shadow: 0 .125em .125em #3b4547;
+        }
+    }
+    .bt{
+        width: 600px;
+        height: 50px;
+        text-align: center;
+        #play{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-image: url(../img/play.png);
+            background-repeat: no-repeat;
+            background-size: 45px 45px;
+            &:active,&:hover{
+                background-image: url(../img/play-active.png);
+            }
+            cursor: pointer;
+        }
+        #pause{
+            display: inline-block;
+            background-image: url(../img/pause.png);
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-size: 45px 45px;
+            &:active,&:hover{
+                background-image: url(../img/pause-active.png);
+            }
+            cursor: pointer;
+        }
+        input[type=range]{
+            position: relative;
+            -webkit-appearance:none;
+            width: 100px;
+            border-radius: 5px;
+            bottom:25px;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            -webkit-appearance:none;
+        }
+        input[type=range]::-webkit-slider-runnable-track{
+            height:10px;
+            border-radius: 5px;
+            box-shadow:0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+        }
+        input[type=range]:focus,input[type=range]:active{
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            -webkit-appearance:none;
+            background: white;
+            height: 20px;
+            width: 20px;
+            margin-top: -5px;
+            border-radius: 50%;
+            border: solid 0.125em rgba(255, 224, 230, 0.8);
+            box-shadow: 0 .125em .125em #3b4547;
+        }
+    }
+}
